@@ -39,7 +39,7 @@ const addDatatoDOM = (data) => {
         <h2>${data.post.title}</h2>
         <p>${data.post.body}</p>
         <div class="user">
-            <img src="${data.user.picture.large}" alt="${data.user.name.first}" />
+            <img src="${data.user.picture.large}" alt="${data.user.name.first}" loading="lazy" />
             <p>${data.user.name.first}</p>
         </div>
     `;
@@ -48,6 +48,8 @@ const addDatatoDOM = (data) => {
   loading.classList.remove("show");
 };
 
+getPost();
+getPost();
 getPost();
 getPost();
 getPost();

@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 50rem;
+  margin: 5rem auto;
+}
+
+.bar-base {
+  height: 2rem;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+.bar-progress {
+  height: 100%;
+  /* width: 0%; */
+  background-color: lightskyblue;
+}
+
+button {
+  margin: 2rem 0;
+}
