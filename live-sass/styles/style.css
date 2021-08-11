@@ -1,0 +1,19 @@
+a:hover, button:hover {
+  opacity: 0.5;
+}
+
+.container {
+  max-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  background-color: lightskyblue;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=style.css.map */

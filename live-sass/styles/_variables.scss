@@ -1,0 +1,14 @@
+$primary-color: lightskyblue;
+$full-width: 100%;
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-layout($align:center, $justify:center) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}

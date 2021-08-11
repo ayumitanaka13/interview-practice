@@ -9,13 +9,13 @@
 
 .bar-base {
   height: 2rem;
-  width: 100%;
+  width: 50rem;
   background-color: aliceblue;
 }
 
 .bar-progress {
-  height: 100%;
-  /* width: 0%; */
+  height: 2rem;
+  width: 0%;
   background-color: lightskyblue;
 }
 
