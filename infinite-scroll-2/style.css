@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  max-width: 30rem;
+
+  margin: 4rem auto;
+  padding: 1rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  background-color: aliceblue;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.1),
+    0px 2px 4px rgba(60, 60, 60, 0.1);
+
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.card img {
+  border-radius: 50%;
+}
+.card p {
+  margin-left: 1rem;
+}
+
+.loading {
+  display: flex;
+
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 0.5 ease-in;
+}
+
+.loading.show {
+  opacity: 1;
+}
+
+.ball {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: gray;
+  animation: bounding 0.5s ease-in infinite;
+}
+
+.ball:nth-child(2) {
+  margin: 0 1rem;
+  animation-delay: 0.1s;
+}
+
+.ball:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes bounding {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  /* 0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  0%,
+  50% {
+    transform: translateY(-1rem);
+  } */
+}
