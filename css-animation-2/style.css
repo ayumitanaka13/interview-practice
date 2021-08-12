@@ -1,0 +1,35 @@
+div {
+  height: 10rem;
+  width: 10rem;
+
+  position: relative;
+  background-color: red;
+
+  animation: square 3s ease-in infinite alternate backwards;
+}
+
+@keyframes square {
+  0% {
+    background-color: red;
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: 10em;
+  }
+  50% {
+    top: 10em;
+    left: 10em;
+  }
+  75% {
+    top: 10em;
+    left: 0;
+  }
+  100% {
+    background-color: blue;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+  }
+}
