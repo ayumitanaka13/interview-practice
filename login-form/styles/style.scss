@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(45deg, #3e26a8, #95f1bf);
+}
+
+// variables start
+$primary-color: #fff;
+$secondary-color: #3e26a8;
+$tertiary-color: #95f1bf;
+
+.shadow {
+  box-shadow: 2px 2px 4px rgba($secondary-color, 0.1);
+}
+
+@mixin input-design(
+  $color: $secondary-color,
+  $background-color: $primary-color
+) {
+  height: 3rem;
+  width: 100%;
+
+  color: $color;
+  font-size: 1em;
+  background-color: rgba($background-color, 0.6);
+
+  border: none;
+  border-radius: 8px;
+  @extend .shadow;
+
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+
+  &:hover {
+    transform: translateY(-0.2rem);
+    transition: all 0.2s ease-in;
+    background-color: rgba($background-color, 0.8);
+  }
+
+  &:focus {
+    outline: none;
+    background-color: rgba($background-color, 0.9);
+  }
+}
+// variables end
+
+.container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  width: 100%;
+}
+
+form {
+  width: 50%;
+  min-width: 30rem;
+  max-width: 50rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  font-size: 1.5rem;
+  color: $primary-color;
+  background-color: rgba($primary-color, 0.2);
+
+  border-radius: 8px;
+  @extend .shadow;
+
+  padding: 4rem;
+
+  label {
+    margin-top: 1rem;
+  }
+  //   label[for="password"] {
+  //     margin-top: 1rem;
+  //   }
+
+  input {
+    @include input-design;
+
+    &::placeholder {
+      color: rgba($secondary-color, 0.5);
+    }
+  }
+
+  button {
+    @include input-design($primary-color, $secondary-color);
+
+    cursor: pointer;
+    margin-top: 2rem;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
