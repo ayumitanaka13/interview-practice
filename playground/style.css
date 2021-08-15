@@ -1,0 +1,44 @@
+div {
+  height: 100px;
+  width: 100px;
+
+  background-color: skyblue;
+  border: blue 5px solid;
+
+  margin: 5px;
+}
+
+.content-box {
+  box-sizing: content-box;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.static {
+  position: static;
+}
+
+.relative {
+  position: relative;
+  top: 0;
+  left: 100px;
+}
+
+.absolute {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.triangle {
+  border: skyblue 5px solid;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
