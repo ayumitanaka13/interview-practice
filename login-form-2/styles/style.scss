@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// variables
+$primary-color: white;
+$secondary-color: cornflowerblue;
+$tertiary-color: darkturquoise;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin box-shadow($color: $primary-color) {
+  box-shadow: 2px 2px 2px rgba($color, 0.4), 4px 4px 4px rgba($color, 0.2);
+}
+
+@mixin input-button-style($color: $secondary-color, $bg-color: $primary-color) {
+  height: 4rem;
+  width: 100%;
+
+  // @include box-shadow($secondary-color);
+
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  color: $color;
+  background-color: rgba($bg-color, 0.5);
+  transition: background-color 0.5s ease-in;
+
+  padding: 0 1rem;
+  margin: 1rem 0;
+
+  &:hover {
+    background-color: rgba($bg-color, 0.7);
+  }
+
+  &:focus {
+    outline: none;
+    background-color: rgba($bg-color, 0.9);
+  }
+}
+// variables
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  @include flex-center;
+
+  color: $primary-color;
+  background-image: linear-gradient(135deg, $secondary-color, $tertiary-color);
+}
+
+.container {
+  height: 40rem;
+  width: 60rem;
+}
+
+form {
+  height: 100%;
+  width: 100%;
+
+  @include flex-center;
+  @include box-shadow;
+
+  font-size: 1.5rem;
+
+  border-radius: 16px;
+  background-color: rgba($primary-color, 0.2);
+
+  padding: 0 4rem;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  label {
+    margin-top: 1rem;
+  }
+
+  input {
+    @include input-button-style;
+    &::placeholder {
+      color: rgba($secondary-color, 0.5);
+    }
+  }
+
+  button {
+    @include input-button-style($primary-color, $secondary-color);
+    cursor: pointer;
+    margin: 2rem 0 0 0;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
