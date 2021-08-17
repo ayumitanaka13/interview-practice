@@ -125,12 +125,26 @@ const processUserInput = (callback) => {
 
 const obj = {
   prop: 42,
-  func: function() {
+  func: function () {
     return this.prop;
   },
-//   func: () => {
-//     return this.prop;
-//   },
+  //   func: () => {
+  //     return this.prop;
+  //   },
 };
 
 console.log("this.prop: ", obj.func());
+
+// algo
+const wordMatch = (word, arr) => {
+  let newWord = word.toLowerCase();
+  let resultArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    newWord.indexOf(arr[i].toLowerCase()) >= 0 && resultArr.push(arr[i]);
+  }
+  return resultArr;
+};
+
+wordMatch("sports", ["Sports", "port", "ocean"]);
+console.log(wordMatch("sports", ["Sports", "port", "ocean"]));
