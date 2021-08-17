@@ -10,8 +10,8 @@
   <body>
     <header>
       <nav>
-        <div class="oxd">OXD</div>
-        <div class="menu-toggle">🍔</div>
+        <div>OXD</div>
+        <div id="menu-toggle">🍔</div>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
@@ -21,27 +21,32 @@
     </header>
     <main>
       <form action="#" method="POST">
-        <h2>Login</h2>
-        <label for="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          placeholder="Enter email"
-          required
-        />
-        <label for="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          name="password"
-          placeholder="Enter password"
-          minlength="8"
-          required
-        />
-        <button type="submit">Login</button>
+        <div>
+          <h2>🔐 Login</h2>
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Enter email"
+            autocomplete="on"
+            required
+          />
+          <label for="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            placeholder="Enter password"
+            autocomplete="on"
+            minlength="8"
+            required
+          />
+          <button type="submit" disabled>Login</button>
+        </div>
       </form>
     </main>
+    <div id="overlay"></div>
     <script src="index.js"></script>
   </body>
 </html>

@@ -1,0 +1,156 @@
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: auto;
+  min-height: 100vh;
+  width: 100vw;
+
+  color: $primary-color;
+  font-size: $default-font-size;
+  background-image: linear-gradient(135deg, $secondary-color, $tertiary-color);
+}
+
+header {
+  height: auto;
+  min-height: 6rem;
+  width: 100%;
+
+  @include flex-style;
+
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  @extend .shadow;
+  background-color: $bg-color;
+
+  padding: 1rem 0;
+
+  nav {
+    height: 100%;
+    width: 80%;
+
+    @include flex-style(center, space-between);
+    flex-wrap: wrap;
+
+    #menu-toggle {
+      display: none;
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        &:nth-child(2) {
+          margin: 0 1rem;
+        }
+        a {
+          color: $primary-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+
+  @include flex-style;
+
+  form {
+    height: auto;
+    min-height: 30rem;
+    width: 80%;
+    max-width: 60rem;
+
+    @include flex-style;
+
+    @extend .shadow;
+    border-radius: $default-border-radius;
+    background-color: $bg-color;
+
+    padding: 2rem;
+
+    label {
+      display: inline-block;
+      margin-top: 2rem;
+    }
+
+    input {
+      @include input-button-style;
+      &::placeholder {
+        color: rgba($secondary-color, 0.5);
+      }
+    }
+
+    button {
+      @include input-button-style($primary-color, $secondary-color);
+      cursor: pointer;
+
+      margin-top: 4rem;
+      &:disabled {
+        opacity: 0.8;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+#overlay {
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  opacity: 0;
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease-in;
+}
+
+@media (max-width: 768px) {
+  header {
+    nav {
+      #menu-toggle {
+        display: block;
+      }
+
+      ul {
+        width: 100%;
+
+        position: absolute;
+        top: -8rem;
+        left: 0;
+
+        background-color: $bg-color;
+
+        padding: 0 0 1rem 10%;
+
+        li {
+          display: block;
+          &:nth-child(2) {
+            margin: 0;
+          }
+        }
+      }
+
+      .show-menu {
+        top: 6rem;
+      }
+    }
+  }
+
+  .show-overlay {
+    z-index: 1 !important;
+    opacity: 1 !important;
+  }
+}
