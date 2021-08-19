@@ -148,3 +148,20 @@ const wordMatch = (word, arr) => {
 
 wordMatch("sports", ["Sports", "port", "ocean"]);
 console.log(wordMatch("sports", ["Sports", "port", "ocean"]));
+
+function createCheckDigit(membershipId) {
+  // Write the code that goes here.
+  let sum = 0;
+  for (let i = 0; i < membershipId.length; i++) {
+    sum += parseInt(membershipId[i]);
+  }
+
+  let sumString = sum.toString();
+  let newSum = 0;
+  for (let i = 0; i < sumString.length; i++) {
+    newSum += parseInt(sumString[i]);
+  }
+  return newSum;
+}
+
+console.log("test", createCheckDigit("55555"));
