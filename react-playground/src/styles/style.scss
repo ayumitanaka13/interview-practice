@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 50rem;
+  width: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem auto;
+}

@@ -2,16 +2,21 @@ import React from "react";
 import { useState } from "react";
 
 const Todos = () => {
-  //   const [todo, setTodo] = useState("");
   const [input, setInput] = useState("");
+  const [todos, setTodos] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setTodos([...todos, input]);
     setInput("");
   };
 
   const handleChange = (e) => {
     setInput(e.target.value);
+  };
+
+  const deleteTodo = (deleteTodo) => {
+    setTodos(todos.filter((todo) => todo !== deleteTodo));
   };
 
   return (
@@ -21,18 +26,22 @@ const Todos = () => {
           id="add-todo"
           name="add-todo"
           type="text"
-          //   value={target.value}
+          value={input}
           placeholder="What's your todo?"
           onChange={handleChange}
         />
         <button type="submit">Add</button>
       </form>
 
-      <div className="todos">
-        <div className="todos__list">
-          <input type="checkbox" id="todo" name="todo" />
-          <label htmlFor="todo">{input}</label>
-        </div>
+      <div>
+        {todos.map((todo, i) => (
+          <div key={i}>
+            <p>{todo}</p>
+            <button type="button" onClick={() => deleteTodo(todo)}>
+              X
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );
