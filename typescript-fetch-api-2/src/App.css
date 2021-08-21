@@ -1,0 +1,17 @@
+.App {
+  width: 30rem;
+  margin: 4rem auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: aliceblue;
+
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.card p {
+  margin-left: 1rem;
+}
