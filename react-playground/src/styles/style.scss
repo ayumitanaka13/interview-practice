@@ -12,6 +12,31 @@
   justify-content: center;
   flex-wrap: wrap;
 
+  header {
+    height: 4rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: lightgray;
+    padding: 0 2rem;
+
+    nav {
+      ul {
+        li {
+          display: inline-block;
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+
   .container {
     width: 80%;
     input,
