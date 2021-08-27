@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  color: #231935;
+  background-color: aliceblue;
+}
+
+button {
+  color: #ffffff;
+  background-color: rgba(245, 133, 41, 0.7);
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  -webkit-box-shadow: 1px 1px 2px rgba(35, 25, 53, 0.1);
+          box-shadow: 1px 1px 2px rgba(35, 25, 53, 0.1);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(245, 133, 41, 0.8);
+  -webkit-transform: translateY(-0.2rem);
+          transform: translateY(-0.2rem);
+}
+
+button:focus {
+  border: 2px solid #f58529;
+  background-color: rgba(245, 133, 41, 0.9);
+}
+
+.App {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.App .container {
+  margin: 4rem 0;
+}
+
+.App .container h1 {
+  text-align: center;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+
+.App .container form {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  -webkit-box-shadow: 2px 2px 16px rgba(35, 25, 53, 0.1);
+          box-shadow: 2px 2px 16px rgba(35, 25, 53, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.App .container form input,
+.App .container form button {
+  display: block;
+  height: 2.5rem;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.App .container form input {
+  color: #231935;
+  background-color: rgba(211, 211, 211, 0.7);
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  -webkit-box-shadow: 1px 1px 2px rgba(35, 25, 53, 0.1);
+          box-shadow: 1px 1px 2px rgba(35, 25, 53, 0.1);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  padding: 0 0.5rem;
+}
+
+.App .container form input:hover {
+  background-color: rgba(211, 211, 211, 0.8);
+  -webkit-transform: translateY(-0.2rem);
+          transform: translateY(-0.2rem);
+}
+
+.App .container form input:focus {
+  border: 2px solid #f58529;
+  background-color: rgba(211, 211, 211, 0.9);
+}
+
+.App .container .todos {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  -webkit-box-shadow: 2px 2px 16px rgba(35, 25, 53, 0.1);
+          box-shadow: 2px 2px 16px rgba(35, 25, 53, 0.1);
+  padding: 2rem;
+}
+
+.App .container .todos h5 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.App .container .todos__todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 2.5rem;
+  width: 100%;
+  background-color: rgba(211, 211, 211, 0.8);
+  border-radius: 8px;
+  -webkit-box-shadow: 1px 1px 2px rgba(35, 25, 53, 0.1);
+          box-shadow: 1px 1px 2px rgba(35, 25, 53, 0.1);
+  margin: 0.5rem 0;
+  padding: 0 0.5rem;
+}
+
+.App .container .todos__todo button {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+/*# sourceMappingURL=style.css.map */

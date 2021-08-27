@@ -1,0 +1,44 @@
+$primary-color: aliceblue;
+$secondary-color: #231935;
+$tertiary-color: #f58529;
+$white-color: #ffffff;
+$gray-color: lightgray;
+
+$font-size: 1rem;
+$border-radius: 16px;
+
+@mixin size($height: 100%, $width: 100%) {
+  height: $height;
+  width: $width;
+}
+@mixin flex($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+@mixin bg-style($border-radius: $border-radius, $padding: 2rem) {
+  background-color: rgba($white-color, 0.5);
+  border-radius: $border-radius;
+  box-shadow: 2px 2px 16px rgba($secondary-color, 0.1);
+  padding: $padding;
+}
+
+@mixin input-btn-style($font-color: $white-color, $bg-color: $tertiary-color) {
+  color: $font-color;
+  background-color: rgba($bg-color, 0.7);
+  border: none;
+  border-radius: $border-radius / 2;
+  outline: none;
+  box-shadow: 1px 1px 2px rgba($secondary-color, 0.1);
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    background-color: rgba($bg-color, 0.8);
+    transform: translateY(-0.2rem);
+  }
+
+  &:focus {
+    border: 2px solid $tertiary-color;
+    background-color: rgba($bg-color, 0.9);
+  }
+}
