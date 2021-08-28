@@ -22,9 +22,38 @@ const App = () => {
   // useEffect(() => {
   //   inputRef.current.focus();
   // }, []);
+
   // memo
   const [number, setNumber] = useState(0);
   const [dark, setDark] = useState(false);
+
+  const el = useRef(null);
+
+  useEffect(() => {
+    console.log(el.current);
+    console.log(JSON.stringify(el.current.getBoundingClientRect()));
+  }, []);
+
+  // // get size of screen
+  // const getWindowSize = () => {
+  //   const { innerWidth: width, innerHeight: height } = window;
+  //   return {
+  //     width,
+  //     height,
+  //   };
+  // };
+
+  // const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  // useEffect(() => {
+  //   const onResize = () => {
+  //     setWindowSize(getWindowSize());
+  //     console.log(windowSize);
+  //   };
+  //   window.addEventListener("resize", onResize);
+  // }, []);
+
+  // return windowSize;
 
   const double = useMemo(() => {
     return slowFunc(number);
@@ -42,7 +71,7 @@ const App = () => {
   }, [themeStyles]);
 
   return (
-    <div className="App">
+    <div className="App" ref={el}>
       <div className="container">
         {/* <Router>
           <Nav />
@@ -64,7 +93,6 @@ const App = () => {
         /> */}
 
         <Counter />
-
       </div>
     </div>
   );
